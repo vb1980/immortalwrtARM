@@ -14,6 +14,7 @@ platform_do_upgrade() {
  	*ct3003* |\
 	*q30* |\
         *komi,a31* |\
+	*nokia,ea0326gmp* |\
 	*snand*)
 		nand_do_upgrade "$1"
 		;;
@@ -45,6 +46,7 @@ platform_check_image() {
  	*ct3003* |\
 	*q30* |\
         *komi,a31* |\
+	*nokia,ea0326gmp* |\
 	*snand* |\
 	*emmc*)
 		# tar magic `ustar`

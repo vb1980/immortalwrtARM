@@ -2,7 +2,7 @@
 #
 # Copyright © 2017 OpenWrt.org
 #
-
+. /lib/functions/leds.sh
 . /lib/functions/uci-defaults.sh
 
 board_config_update
@@ -32,6 +32,11 @@ case "$(board_name)" in
 *komi,a31*)
 	ucidef_set_led_default "led_green" "GREEN" "komia31:green" "1"
 	ucidef_set_led_default "led_blue" "BLUE" "komia31:blue" "0"
+	;;
+nokia,ea0326gmp)
+	ucidef_set_led_netdev "wan" "WAN" "green:wan" "eth1" "link"
+	ucidef_set_led_netdev "lan" "LAN" "green:lan" "eth0" "link"
+	ucidef_set_led_netdev "wlan" "WLAN" "green:wlan" "rax0" "link"
 	;;
 esac
 board_config_flush
