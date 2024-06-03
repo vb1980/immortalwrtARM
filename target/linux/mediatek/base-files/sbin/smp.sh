@@ -716,6 +716,7 @@ setup_model()
 	*nx30pro* |\
 	*q30* |\
 	*rax3000m* |\
+	*rax3000m-emmc-rfb* |\
 	*ct3003* |\
         *wr30u* |\
 	*mt3000* |\

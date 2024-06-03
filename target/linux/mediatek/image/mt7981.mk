@@ -393,6 +393,19 @@ define Device/mt7981-cmcc-rax3000m
 endef
 TARGET_DEVICES += mt7981-cmcc-rax3000m
 
+define Device/mt7981-cmcc-rax3000m-emmc-rfb
+  DEVICE_VENDOR := CMCC
+  DEVICE_MODEL := RAX3000M-eMMC
+  DEVICE_DTS := mt7981-cmcc-rax3000m-emmc-rfb
+  SUPPORTED_DEVICES := cmcc,rax3000m-emmc-rfb
+  DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
+  DEVICE_PACKAGES := mkf2fs e2fsprogs blkid blockdev losetup kmod-fs-ext4 \
+	  kmod-mmc kmod-fs-f2fs kmod-fs-vfat kmod-nls-cp437 \
+	  kmod-nls-iso8859-1
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += mt7981-cmcc-rax3000m-emmc-rfb
+
 define Device/nokia_ea0326gmp
   DEVICE_VENDOR := Nokia
   DEVICE_MODEL := EA0326GMP

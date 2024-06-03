@@ -37,6 +37,10 @@ case "$(board_name)" in
 	ucidef_set_led_default "led_green" "GREEN" "green:system" "1"
 	ucidef_set_led_default "led_blue" "BLUE" "blue:wan" "0"
 	;;
+*cmcc,rax3000m-emmc-rfb*)
+	ucidef_set_led_default "led_green" "GREEN" "green:system" "1"
+	ucidef_set_led_default "led_blue" "BLUE" "blue:wan" "0"
+	;;
 nokia,ea0326gmp)
 	ucidef_set_led_netdev "wan" "WAN" "green:wan" "eth1" "link"
 	ucidef_set_led_netdev "lan" "LAN" "green:lan" "eth0" "link"
