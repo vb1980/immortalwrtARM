@@ -33,6 +33,11 @@ case "$(board_name)" in
 	ucidef_set_led_default "led_green" "GREEN" "komia31:green" "1"
 	ucidef_set_led_default "led_blue" "BLUE" "komia31:blue" "0"
 	;;
+*cmcc,a10*)
+	ucidef_set_led_default "led_wan_internet" "BLUE" "led_blue" "1"
+	ucidef_set_led_default "led_sys" "RED" "led_red" "1"
+	ucidef_set_led_default "led_lan3" "GREEN" "led_green" "1"
+	;;
 *cmcc,rax3000m*)
 	ucidef_set_led_default "led_green" "GREEN" "green:system" "1"
 	ucidef_set_led_default "led_blue" "BLUE" "blue:wan" "0"

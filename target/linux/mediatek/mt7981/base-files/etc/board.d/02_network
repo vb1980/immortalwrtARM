@@ -10,6 +10,7 @@ mediatek_setup_interfaces()
 	local board="$1"
 
 	case $board in
+	*cmcc,a10* |\
 	*fpga*)
 		ucidef_set_interfaces_lan_wan "eth0" "eth1"
 		ucidef_add_switch "switch0" \
