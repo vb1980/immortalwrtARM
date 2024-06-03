@@ -12,6 +12,7 @@ platform_do_upgrade() {
 	*360,t7* |\
 	*nx30pro* |\
 	*rax3000m* |\
+	*hx3001* |\
  	*ct3003* |\
 	*q30* |\
         *komi,a31* |\
@@ -45,6 +46,7 @@ platform_check_image() {
 	*360,t7* |\
 	*nx30pro* |\
 	*rax3000m* |\
+	*hx3001* |\
  	*ct3003* |\
 	*q30* |\
         *komi,a31* |\

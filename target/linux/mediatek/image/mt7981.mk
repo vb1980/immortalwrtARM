@@ -376,6 +376,23 @@ define Device/mt7981-komi-a31
 endef
 TARGET_DEVICES += mt7981-komi-a31
 
+define Device/lc_hx3001
+  DEVICE_VENDOR := LC
+  DEVICE_MODEL := HX3001
+  DEVICE_DTS := mt7981-lc-hx3001
+  DEVICE_DTS_DIR := $(DTS_DIR)/mediatek
+  SUPPORTED_DEVICES := lc,hx3001
+  UBINIZE_OPTS := -E 5
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 116736k
+  KERNEL_IN_UBI := 1
+  IMAGES += factory.bin
+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += lc_hx3001
+
 define Device/cmcc-a10
   DEVICE_VENDOR := CMCC
   DEVICE_MODEL := A10	

@@ -29,6 +29,12 @@ case "$(board_name)" in
         ucidef_set_led_default "sys_yellow" "YELLOW" "led_yellow" "0"
         ucidef_set_led_netdev "net_blue" "NET_BLUE" "net_blue" "eth1"
 	;;
+*hx3001*)
+	ucidef_set_led_default "system_led" "GREEN" "system:green" "1"
+	ucidef_set_led_default "wifi" "GREEN" "wifi:green" "0"
+	ucidef_set_led_default "wan" "GREEN" "wan:green" "eth1"
+	ucidef_set_led_netdev "lan" "GREEN" "lan:green" "eth0"
+	;;
 *komi,a31*)
 	ucidef_set_led_default "led_green" "GREEN" "komia31:green" "1"
 	ucidef_set_led_default "led_blue" "BLUE" "komia31:blue" "0"
